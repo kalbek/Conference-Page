@@ -52,11 +52,13 @@ function main() {
     },
   ];
 
+  // dynamically create speakers section
   const speakerDiv = document.querySelector(".speaker-group");
-  const speak = document.querySelector(".speaker");
   speakers.forEach((speaker) => {
     speakerDiv.innerHTML += `
-      <div class="speaker-container ${speaker.id > 2 ? "hidden" : "visible"}">
+      <div class="speaker-container ${
+        speaker.id > 2 ? "hidden" : "visible"
+      }" id="speaker-container">
         <div class="speaker">
           <div class="image" style="background-image: url(${
             speaker.imageUrl
@@ -69,6 +71,42 @@ function main() {
         </div>
       </div>
         `;
+  });
+  //   handle MORE button action to toggle display for speakers
+  const more = document.querySelector(".more-button");
+  const moreOrLess = document.getElementById("more-less");
+  more.addEventListener("click", () => {
+    speakerDiv.innerHTML = ``;
+    speakers.forEach((speaker) => {
+      speakerDiv.innerHTML += `
+        <div class="speaker-container ${"speaker" + speaker.id} ${
+        moreOrLess.textContent === "MORE" ? "visible" : "hidden"
+      }" id="speaker-container">
+            <div class="speaker">
+                <div class="image" style="background-image: url(${
+                  speaker.imageUrl
+                })"></div>
+                    <div class="text-content">
+                        <div class="title">${speaker.title}</div>
+                        <div class="main-text">${speaker.mainText}</div>
+                    <div class="sub-text">${speaker.subText}</div>
+                </div>
+            </div>
+        </div>
+        `;
+    });
+    //   toogle text content for MORE / LESS button
+    const speakerContainer = document.getElementById("speaker-container");
+    if (speakerContainer.classList.contains("visible")) {
+      moreOrLess.innerHTML = "LESS";
+    } else moreOrLess.innerHTML = "MORE";
+    //   keep first two speaker visible on LESS
+    const firstSpeaker = document.querySelector(".speaker1");
+    const secondSpeaker = document.querySelector(".speaker2");
+    firstSpeaker.classList.remove("hidden");
+    secondSpeaker.classList.remove("hidden");
+    firstSpeaker.classList.add("visible");
+    secondSpeaker.classList.add("visible");
   });
 }
 main();
