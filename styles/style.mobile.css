@@ -229,7 +229,15 @@ body {
   position: absolute;
   left: 1rem;
   top: 1rem;
-  /* padding-top: 1rem; */
+}
+
+.hidden {
+  display: none;
+  background-color: red;
+}
+
+.visible {
+  display: block;
 }
 
 /* style the hero of the main section */
@@ -374,7 +382,6 @@ main .hero {
 
 .speaker .image {
   width: 50%;
-  background-image: url("../images/home/speaker-01.png");
   background-size: 100%;
   background-repeat: no-repeat;
 }
