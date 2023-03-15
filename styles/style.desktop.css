@@ -1,0 +1,78 @@
+@media (min-width: 768px) {
+  /* styling the top navigation */
+
+  body {
+    max-width: 100vw;
+    background-color: green;
+  }
+
+  .top-nav {
+    display: block;
+  }
+
+  .top-nav .container {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    padding: 0.5rem 10rem 1.5rem 0;
+  }
+
+  .top-nav ul {
+    float: right;
+  }
+
+  .cc-container {
+    right: 12rem;
+    margin-top: 0.2rem;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .bottom-nav .container {
+    width: 70%;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .bottom-nav .menu-container,
+  .bottom-nav .cc-container {
+    display: block;
+  }
+
+  .bottom-nav .menu-container {
+    display: block;
+  }
+
+  .bottom-nav .menu-container {
+    background-color: #fff;
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    padding-top: 1rem;
+    padding-right: 12rem;
+  }
+
+  .bottom-nav .menu-container a {
+    color: var(--color-menu);
+    font-weight: 400;
+  }
+
+  main .hero {
+    width: 100%;
+  }
+
+  main .hero .container {
+    width: 70%;
+  }
+
+  .hero-image h1 {
+    font-weight: 900;
+    font-size: 70px;
+  }
+
+  .hero-image p {
+    font-size: 45px;
+  }
+}

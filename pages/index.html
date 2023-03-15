@@ -1,32 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/style.desktop.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../styles/style.mobile.css" />
+    <link rel="stylesheet" href="../styles/style.desktop.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Domine&family=Inter:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!--  -->
     <header>
-        <nav>
-            <div class="top-nav">
-                <div class="container">
-                    <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                    </ul>
+      <nav>
+        <div class="top-nav flex-end">
+          <div class="container">
+            <ul class="flex gap-1">
+              <li>
+                <a href=""
+                  ><img src="../images/home/facebook.svg" alt="" srcset=""
+                /></a>
+              </li>
+              <li>
+                <a href=""></a
+                ><img src="../images/home/twitter.svg" alt="" srcset="" />
+              </li>
+              <li><a href=""></a>English</li>
+              <li><a href=""></a>My Page</li>
+              <li><a href=""></a>Logout</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-nav flex-centered">
+          <div class="mobile-menu">
+            <img src="../images/mobile-menu.svg" alt="open mobile menu" />
+          </div>
+          <div class="container flex-spaced">
+            <div class="logo-container">
+              <img src="../images/home/logo.svg" alt="" srcset="" />
+            </div>
+            <div class="menu-container flex">
+              <ul class="flex gap-5">
+                <li><a href="">About</a></li>
+                <li><a href="">Program</a></li>
+                <li><a href="">Join</a></li>
+                <li><a href="">Sponsor</a></li>
+                <li><a href="">News</a></li>
+              </ul>
+            </div>
+            <div class="cc-container absolute">
+              <img src="../images/home/campaign.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="flex-centered">
+      <div class="container">
+        <div class="hero flex-column-centered">
+          <div class="hero-image">
+            <p>"Hello Sharing world!"</p>
+            <h1 class="text-clip">
+              CREATIVE COMMONS <br />
+              GLOBAL SUMMIT <br />
+              2015
+            </h1>
+          </div>
+          <div class="sub-theme">
+            <div class="container">
+              <p>
+                A joyful celebration believing in the value of openness and
+                sharing, creating a positive change with people from over 80
+                countries is taking place in October, in Korea.
+              </p>
+            </div>
+          </div>
+          <div class="date-venue">
+            <div class="primary-text">2015.10.15(THU) ~ 16(FRI)</div>
+            <div class="secondary-text">
+              @ National Museum of Karea, Art Center Nabi and more
+            </div>
+          </div>
+        </div>
+        <!-- program section -->
+        <div class="main-program">
+          <div class="container flex-column-centered">
+            <div class="title">
+              <heading>Main Program</heading>
+              <div class="bar">
+                <img src="../images/home/program-title-underline.svg" alt="" />
+              </div>
+            </div>
+            <div class="speaker-card">
+              <div class="icon">
+                <img src="../images/home/lecture-icon.svg" alt="lecture icon" />
+              </div>
+              <div class="container">
+                <div class="label">Lecture</div>
+                <div class="text">
+                  Listen to the speakers from various countries about the
+                  messages of sharing and opening.
+                </div>
+              </div>
+            </div>
+            <div class="speaker-card">
+              <div class="icon">
+                <img
+                  src="../images/home/ccexhibition-icon.svg"
+                  alt="CC Exhibition Icon"
+                />
+              </div>
+              <div class="container">
+                <div class="label">CC Exhibition</div>
+                <div class="text">
+                  Appreciate various creations applying CC license of artists,
+                  organized from Art Center Nabi
+                </div>
+              </div>
+            </div>
+            <div class="speaker-card">
+              <div class="icon">
+                <img src="../images/home/forum-icon.svg" alt="forum icon" />
+              </div>
+              <div class="container">
+                <div class="label">Forum</div>
+                <div class="text">
+                  Have the time to share your thoughts and opinions with experts
+                  for each topic.
+                </div>
+              </div>
+            </div>
+            <div class="speaker-card">
+              <div class="icon">
+                <img
+                  src="../images/home/workshop-icon.svg"
+                  alt="workshop icon"
+                />
+              </div>
+              <div class="container">
+                <div class="label">Workshop</div>
+                <div class="text">
+                  Try creating your own work using open source license rather
+                  than just watching at it.
+                </div>
+              </div>
+            </div>
+            <div class="speaker-card">
+              <div class="icon">
+                <img
+                  src="../images/home/ccignite-icon.svg"
+                  alt="cc ignite icon"
+                />
+              </div>
+              <div class="container">
+                <div class="label">CC Ignite</div>
+                <div class="text">
+                  get opportunities to network with CC affiliates around the
+                  world, also after the summit.
+                </div>
+              </div>
+            </div>
+            <div class="join-button flex-center-centered">
+                <div class="text flex-centered">
+                    Join CC Global Summit 2015
                 </div>
             </div>
-            <div class="bottom-nav"></div>
-        </nav>
-    </header>
-    <main></main>
+          </div>
+        </div>
+        <!-- featured speakers section -->
+      </div>
+    </main>
     <footer></footer>
-</body>
-<script src="../script/script.js"></script>
+  </body>
+  <script src="../script/script.js"></script>
 </html>
