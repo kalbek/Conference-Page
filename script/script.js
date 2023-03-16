@@ -21,11 +21,10 @@ function main() {
     {
       id: 3,
       title: "Lila tretikov",
-      mainText:
-        "Director of Art Centre Nabi and a board member of CC Korea",
+      mainText: "Director of Art Centre Nabi and a board member of CC Korea",
       subText:
         "As the main venue for new media art production in Korea, Nabi promotes cross-disciplinary collaboration and understanding among science technology, humanities, and the arts.",
-      imageUrl: "../images/home/speaker-05.png",
+      imageUrl: "../images/home/speaker-03.png",
     },
     {
       id: 4,
@@ -47,7 +46,7 @@ function main() {
       id: 6,
       title: "Ryan Merkley",
       mainText: "CEO of Creativve Commons, ex COO of the Mozilla Foundation",
-      subText: "Ryan had been leading open-source projects at the Mozilla Foundation such as the open-source move-ment",
+      subText: "",
       imageUrl: "../images/home/speaker-06.png",
     },
   ];
@@ -115,5 +114,10 @@ function main() {
     firstSpeaker.classList.add("visible");
     secondSpeaker.classList.add("visible");
   });
+  // check screen width to specify no of speaker cards visible
+  const screenWidth =
+    window.screenWidth > 768 ? window.innerWidth : screen.width;
+    console.log(screenWidth);
+    const speakerContainer = document.querySelector('.speakerDiv')
 }
 main();
