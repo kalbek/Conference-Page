@@ -5,7 +5,8 @@
   --color-text-primary: #595959;
   --color-text-secondary: #515151;
   --color-bg-secondary: #f8f8f8;
-  --color-card-bg: rgba(59, 62, 69, 0.3);
+  /* --color-card-bg: rgba(241, 241, 241, 0.3); */
+  --color-card-bg: rgba(59, 62, 69, 0.6);
   --color-black-tile: #000;
   --color-subtext: #f78c89;
 }
@@ -184,23 +185,23 @@ table {
 }
 
 .gap-1 {
-  gap: 1rem;
+  gap: 10%;
 }
 
 .gap-2 {
-  gap: 2rem;
+  gap: 20%;
 }
 
 .gap-3 {
-  gap: 3rem;
+  gap: 30%;
 }
 
 .gap-4 {
-  gap: 4rem;
+  gap: 40%;
 }
 
 .gap-5 {
-  gap: 5rem;
+  gap: 50%;
 }
 
 .absolute {
@@ -229,11 +230,11 @@ body {
   position: absolute;
   left: 1rem;
   top: 1rem;
+  margin-left: 0px;
 }
 
 .hidden {
   display: none;
-  background-color: red;
 }
 
 .visible {
@@ -243,14 +244,18 @@ body {
 /* style the hero of the main section */
 
 main .hero {
-  width: 100%;
+  width: auto;
   height: fit-content;
-  height: 75vh;
+  height: auto;
   background-image: url("../images/home/hero-background-mobile.svg");
   background-size: 100%;
   object-fit: cover;
   background-repeat: no-repeat;
-  /* margin-top: 2rem; */
+  padding-bottom: 5rem;
+}
+
+.hero .container {
+  float: left;
 }
 
 .hero-image {
@@ -311,6 +316,7 @@ main .hero {
 .main-program {
   margin-top: -0.6rem;
   background-image: url("../images/home/program-bg.svg");
+  width: 104%;
 }
 
 .main-program .title {
@@ -318,6 +324,11 @@ main .hero {
   flex-direction: column;
   align-items: center;
   padding: 2rem 0;
+}
+
+.main-program .title .bar {
+  margin-top: 1rem;
+  content: url("../images/home/bar-small.svg");
 }
 
 .main-program .title,
@@ -340,7 +351,7 @@ main .hero {
   line-height: 1.5rem;
 }
 
-.speaker-card {
+.program-card {
   display: flex;
   justify-content: flex-start;
   background-color: var(--color-card-bg);
@@ -348,10 +359,14 @@ main .hero {
   margin: 0 1rem 0.5rem 1rem;
 }
 
-.speaker-card .container {
+.program-card .container {
   display: flex;
   justify-content: space-between;
   margin-top: -0.3rem;
+}
+
+.see-program {
+  display: none;
 }
 
 .join-button {
@@ -371,7 +386,6 @@ main .hero {
 /* style speadkers section */
 
 .featured-speakers {
-  /* width: 100%; */
   height: auto;
   background-color: #fff;
 }
@@ -442,10 +456,14 @@ main .hero {
   margin-top: 1rem;
 }
 
+.more-button:hover {
+  cursor: pointer;
+}
+
 .more-button p {
   font-style: normal;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 28px;
   display: flex;
   align-items: center;
@@ -457,6 +475,10 @@ main .hero {
   padding: 0.5rem;
 }
 
-.more-button .down-arrow {
+.more-button .arrow {
   content: url("../images/home/arrow-down.svg");
+}
+
+.rotate180 {
+  transform: rotate(180deg);
 }

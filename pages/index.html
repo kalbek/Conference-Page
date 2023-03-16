@@ -36,7 +36,7 @@
             </ul>
           </div>
         </div>
-        <div class="bottom-nav flex-centered">
+        <div class="bottom-nav relative flex-centered">
           <div class="mobile-menu">
             <img src="../images/mobile-menu.svg" alt="open mobile menu" />
           </div>
@@ -45,7 +45,7 @@
               <img src="../images/home/logo.svg" alt="" srcset="" />
             </div>
             <div class="menu-container flex">
-              <ul class="flex gap-5">
+              <ul class="flex">
                 <li><a href="">About</a></li>
                 <li><a href="">Program</a></li>
                 <li><a href="">Join</a></li>
@@ -53,7 +53,7 @@
                 <li><a href="">News</a></li>
               </ul>
             </div>
-            <div class="cc-container absolute">
+            <div class="cc-container">
               <img src="../images/home/campaign.svg" alt="" />
             </div>
           </div>
@@ -62,6 +62,7 @@
     </header>
     <main class="flex-centered">
       <div class="container">
+        <!-- hero section -->
         <div class="hero flex-column-centered">
           <div class="hero-image">
             <p>"Hello Sharing world!"</p>
@@ -96,74 +97,92 @@
                 <img src="../images/home/bar-small.svg" alt="" />
               </div>
             </div>
-            <div class="speaker-card">
-              <div class="icon">
-                <img src="../images/home/lecture-icon.svg" alt="lecture icon" />
+            <div class="programs">
+              <div class="program-card">
+                <div class="container">
+                  <div class="icon">
+                    <img
+                      src="../images/home/lecture-icon.svg"
+                      alt="lecture icon"
+                    />
+                  </div>
+                  <div class="container">
+                    <div class="label">Lecture</div>
+                    <div class="text">
+                      Listen to the speakers from various countries about the
+                      messages of sharing and opening.
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="container">
-                <div class="label">Lecture</div>
-                <div class="text">
-                  Listen to the speakers from various countries about the
-                  messages of sharing and opening.
+              <div class="program-card">
+                <div class="container">
+                  <div class="icon">
+                    <img
+                      src="../images/home/ccexhibition-icon.svg"
+                      alt="CC Exhibition Icon"
+                    />
+                  </div>
+                  <div class="container">
+                    <div class="label">CC Exhibition</div>
+                    <div class="text">
+                      Appreciate various creations applying CC license of
+                      artists, organized from Art Center Nabi
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="program-card">
+                <div class="container">
+                  <div class="icon">
+                    <img src="../images/home/forum-icon.svg" alt="forum icon" />
+                  </div>
+                  <div class="container">
+                    <div class="label">Forum</div>
+                    <div class="text">
+                      Have the time to share your thoughts and opinions with
+                      experts for each topic.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="program-card">
+                <div class="container">
+                  <div class="icon">
+                    <img
+                      src="../images/home/workshop-icon.svg"
+                      alt="workshop icon"
+                    />
+                  </div>
+                  <div class="container">
+                    <div class="label">Workshop</div>
+                    <div class="text">
+                      Try creating your own work using open source license
+                      rather than just watching at it.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="program-card">
+                <div class="container">
+                  <div class="icon">
+                    <img
+                      src="../images/home/ccignite-icon.svg"
+                      alt="cc ignite icon"
+                    />
+                  </div>
+                  <div class="container">
+                    <div class="label">CC Ignite</div>
+                    <div class="text">
+                      get opportunities to network with CC affiliates around the
+                      world, also after the summit.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="speaker-card">
-              <div class="icon">
-                <img
-                  src="../images/home/ccexhibition-icon.svg"
-                  alt="CC Exhibition Icon"
-                />
-              </div>
-              <div class="container">
-                <div class="label">CC Exhibition</div>
-                <div class="text">
-                  Appreciate various creations applying CC license of artists,
-                  organized from Art Center Nabi
-                </div>
-              </div>
-            </div>
-            <div class="speaker-card">
-              <div class="icon">
-                <img src="../images/home/forum-icon.svg" alt="forum icon" />
-              </div>
-              <div class="container">
-                <div class="label">Forum</div>
-                <div class="text">
-                  Have the time to share your thoughts and opinions with experts
-                  for each topic.
-                </div>
-              </div>
-            </div>
-            <div class="speaker-card">
-              <div class="icon">
-                <img
-                  src="../images/home/workshop-icon.svg"
-                  alt="workshop icon"
-                />
-              </div>
-              <div class="container">
-                <div class="label">Workshop</div>
-                <div class="text">
-                  Try creating your own work using open source license rather
-                  than just watching at it.
-                </div>
-              </div>
-            </div>
-            <div class="speaker-card">
-              <div class="icon">
-                <img
-                  src="../images/home/ccignite-icon.svg"
-                  alt="cc ignite icon"
-                />
-              </div>
-              <div class="container">
-                <div class="label">CC Ignite</div>
-                <div class="text">
-                  get opportunities to network with CC affiliates around the
-                  world, also after the summit.
-                </div>
-              </div>
+            <div class="see-program">
+              <p><u>SEE THE WHOLE PROGRAM</u></p>
             </div>
             <div class="join-button flex-center-centered">
               <div class="text flex-centered">Join CC Global Summit 2015</div>
@@ -183,7 +202,7 @@
             <div class="more-button flex-center-centered">
               <div class="container flex-spaced gap-1">
                 <p id="more-less">MORE</p>
-                <div class="down-arrow"></div>
+                <div class="arrow"></div>
               </div>
             </div>
           </div>
