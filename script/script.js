@@ -115,9 +115,33 @@ function main() {
     secondSpeaker.classList.add("visible");
   });
   // check screen width to specify no of speaker cards visible
-  const screenWidth =
-    window.screenWidth > 768 ? window.innerWidth : screen.width;
-    console.log(screenWidth);
-    const speakerContainer = document.querySelector('.speakerDiv')
 }
+
+// control number of speakers displayed for mobile and desktop views initially
+function controlSpeakers() {
+  const screenWidth = screen.width;
+  const speakers = document.querySelectorAll(".speaker-container");
+  speakers.forEach((speaker, index) => {
+    if (screenWidth > 768) {
+      speaker.classList.contains("hidden") &&
+        speaker.classList.remove("hidden");
+      speaker.classList.add("visible");
+    } else {
+      if (index < 2) {
+        speaker.classList.contains("hidden") &&
+          speaker.classList.remove("hidden");
+        speaker.classList.add("visible");
+      } else {
+        speaker.classList.contains("visible") &&
+          speaker.classList.remove("visible");
+        speaker.classList.add("hidden");
+      }
+    }
+  });
+}
+window.addEventListener("resize", () => {
+  controlSpeakers();
+});
+window.onload = () => controlSpeakers();
+window.removeEventListener("resize", () => {});
 main();

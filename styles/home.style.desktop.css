@@ -8,7 +8,7 @@
 
   .top-nav {
     display: block;
-  }
+  } 
 
   .top-nav .container {
     background-color: var(--color-primary);
@@ -172,9 +172,11 @@
     font-size: 30px;
     line-height: 28px;
     padding: 4rem 0;
+    margin-left: 4%;
   }
 
   .main-program .title .bar {
+    margin-left: 4%;
     margin-top: 1rem;
     content: url("../images/home/program-title-underline.svg");
   }
@@ -203,7 +205,11 @@
   }
 
   .main-program .programs .program-card:not(:first-child) {
-    margin-left: -0.3rem;
+    margin-left: -0.000001px;
+  }
+
+  .main-program .programs .program-card {
+    margin-right: 5px;
   }
 
   .program-card .container .container {
@@ -247,6 +253,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
+    margin-left: 4%;
   }
 
   .more-button {
