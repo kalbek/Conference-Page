@@ -55,17 +55,15 @@ function main() {
   const speakerDiv = document.querySelector(".speaker-group");
   speakers.forEach((speaker) => {
     speakerDiv.innerHTML += `
-      <div class="speaker-container ${
+      <div class='speaker-container ${
         speaker.id > 2 ? "hidden" : "visible"
-      }" id="speaker-container">
-        <div class="speaker">
-          <div class="image" style="background-image: url(${
-            speaker.imageUrl
-          })"></div>
-            <div class="text-content">
-              <div class="title">${speaker.title}</div>
-              <div class="main-text">${speaker.mainText}</div>
-            <div class="sub-text">${speaker.subText}</div>
+      }' id='speaker-container'>
+  <div class='speaker'>
+<div class='image' style='background-image: url(${speaker.imageUrl})'></div>
+            <div class='text-content'>
+              <div class='title'>${speaker.title}</div>
+              <div class='main-text'>${speaker.mainText}</div>
+            <div class='sub-text'>${speaker.subText}</div>
           </div>
         </div>
       </div>
@@ -78,17 +76,17 @@ function main() {
     speakerDiv.innerHTML = ``;
     speakers.forEach((speaker) => {
       speakerDiv.innerHTML += `
-        <div class="speaker-container ${"speaker" + speaker.id} ${
+        <div class='speaker-container ${"speaker" + speaker.id} ${
         moreOrLess.textContent === "MORE" ? "visible" : "hidden"
-      }" id="speaker-container">
-            <div class="speaker">
-                <div class="image" style="background-image: url(${
+      }' id='speaker-container'>
+            <div class='speaker'>
+                <div class='image' style='background-image: url(${
                   speaker.imageUrl
-                })"></div>
-                    <div class="text-content">
-                        <div class="title">${speaker.title}</div>
-                        <div class="main-text">${speaker.mainText}</div>
-                    <div class="sub-text">${speaker.subText}</div>
+                })'></div>
+                    <div class='text-content'>
+                        <div class='title'>${speaker.title}</div>
+                        <div class='main-text'>${speaker.mainText}</div>
+                    <div class='sub-text'>${speaker.subText}</div>
                 </div>
             </div>
         </div>
@@ -124,15 +122,21 @@ const closeMobileMenu = document.getElementById("close-mobile-menus");
 const aboutOption = document.getElementById("mobile-about");
 // function to handle closing mobile menu
 function handleCloseMobileMenu() {
-  mobileMenu.classList.contains("visible") &&
-    mobileMenu.classList.remove("visible");
-  mobileMenu.classList.add("hidden");
+  if (
+    mobileMenu.classList.contains("visible") &&
+    mobileMenu.classList.remove("visible")
+  ) {
+    mobileMenu.classList.add("hidden");
+  }
 }
 // function to handle opening mobile menu
 function handleOpenMobileMenu() {
-  mobileMenu.classList.contains("hidden") &&
-    mobileMenu.classList.remove("hidden");
-  mobileMenu.classList.add("visible");
+  if (
+    mobileMenu.classList.contains("hidden") &&
+    mobileMenu.classList.remove("hidden")
+  ) {
+    mobileMenu.classList.add("visible");
+  }
 }
 // open mobile menu on hamburger icon click (index page)
 indexMenu !== null &&
@@ -156,18 +160,21 @@ function controlSpeakers() {
   const speakers = document.querySelectorAll(".speaker-container");
   speakers.forEach((speaker, index) => {
     if (screenWidth > 768) {
-      speaker.classList.contains("hidden") &&
+      if (speaker.classList.contains("hidden")) {
         speaker.classList.remove("hidden");
+      }
       speaker.classList.add("visible");
       handleCloseMobileMenu();
     } else {
       if (index < 2) {
-        speaker.classList.contains("hidden") &&
+        if (speaker.classList.contains("hidden")) {
           speaker.classList.remove("hidden");
+        }
         speaker.classList.add("visible");
       } else {
-        speaker.classList.contains("visible") &&
+        if (speaker.classList.contains("visible")) {
           speaker.classList.remove("visible");
+        }
         speaker.classList.add("hidden");
       }
     }
