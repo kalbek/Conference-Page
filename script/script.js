@@ -76,8 +76,8 @@ function main() {
     speakerDiv.innerHTML = '';
     speakers.forEach((speaker) => {
       speakerDiv.innerHTML += `
-        <div class='speaker-container ${'speaker' + speaker.id} ${
-  moreOrLess.textContent === 'MORE' ? 'visible' : 'hidden'
+        <div class='speaker-container 
+        ${moreOrLess.textContent === 'MORE' ? 'visible' : 'hidden'
 }' id='speaker-container'>
             <div class='speaker'>
                 <div class='image' style='background-image: url(${
@@ -139,9 +139,11 @@ indexMenu.addEventListener('click', () => {
   handleOpenMobileMenu();
 });
 // open mobile menu on hamburger icon click (about page)
-if (aboutMenu !== null) aboutMenu.addEventListener('click', () => {
-  handleOpenMobileMenu();
-});
+if (aboutMenu !== null) {
+  aboutMenu.addEventListener('click', () => {
+    handleOpenMobileMenu();
+  });
+}
 closeMobileMenu.addEventListener('click', () => {
   handleCloseMobileMenu();
 });
@@ -150,13 +152,10 @@ aboutOption.addEventListener('click', () => {
 });
 // control number of speakers displayed for mobile and desktop views initially
 function controlSpeakers() {
-  const screenWidth = screen.width;
+  const screenWidth = window.screen.width;
   const speakers = document.querySelectorAll('.speaker-container');
   speakers.forEach((speaker, index) => {
     if (screenWidth > 768) {
-      if (speaker.classList.contains('hidden')) {
-        speaker.classList.remove('hidden');
-      }
       speaker.classList.add('visible');
       handleCloseMobileMenu();
     } else {
