@@ -116,7 +116,40 @@ function main() {
   });
   // check screen width to specify no of speaker cards visible
 }
-
+// handle mobile menu opening and closing
+const indexMenu = document.getElementById("open-mobile-menu");
+const aboutMenu = document.getElementById("open-mobile-menu-about");
+const mobileMenu = document.getElementById("mobile-menu-active");
+const closeMobileMenu = document.getElementById("close-mobile-menus");
+const aboutOption = document.getElementById("mobile-about");
+// function to handle closing mobile menu
+function handleCloseMobileMenu() {
+  mobileMenu.classList.contains("visible") &&
+    mobileMenu.classList.remove("visible");
+  mobileMenu.classList.add("hidden");
+}
+// function to handle opening mobile menu
+function handleOpenMobileMenu() {
+  mobileMenu.classList.contains("hidden") &&
+    mobileMenu.classList.remove("hidden");
+  mobileMenu.classList.add("visible");
+}
+// open mobile menu on hamburger icon click (index page)
+indexMenu !== null &&
+  indexMenu.addEventListener("click", () => {
+    handleOpenMobileMenu();
+  });
+// open mobile menu on hamburger icon click (about page)
+aboutMenu !== null &&
+  aboutMenu.addEventListener("click", () => {
+    handleOpenMobileMenu();
+  });
+closeMobileMenu.addEventListener("click", () => {
+  handleCloseMobileMenu();
+});
+aboutOption.addEventListener("click", () => {
+  handleCloseMobileMenu();
+});
 // control number of speakers displayed for mobile and desktop views initially
 function controlSpeakers() {
   const screenWidth = screen.width;
@@ -126,6 +159,7 @@ function controlSpeakers() {
       speaker.classList.contains("hidden") &&
         speaker.classList.remove("hidden");
       speaker.classList.add("visible");
+      handleCloseMobileMenu();
     } else {
       if (index < 2) {
         speaker.classList.contains("hidden") &&
