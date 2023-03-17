@@ -494,10 +494,6 @@ main .hero {
   transform: rotate(180deg);
 }
 
-.partner {
+.partner, .footer {
   display: none;
-}
-
-.speaker-container {
-  /* display: block; */
 }

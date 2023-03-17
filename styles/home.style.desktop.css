@@ -3,7 +3,6 @@
 
   body {
     max-width: 100vw;
-    background-color: green;
     position: relative;
   }
 
@@ -69,7 +68,9 @@
     justify-content: space-between;
     color: #fff;
     font-family: "Lato", sans-serif;
-    font-weight: 700;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
     right: 15%;
     position: relative;
   }
@@ -83,7 +84,10 @@
 
   .bottom-nav .menu-container a {
     color: var(--color-menu);
-    font-weight: 400;
+  }
+
+  .bottom-nav .menu-container a:hover {
+    color: var(--color-heading);
   }
 
   main .container {
@@ -96,6 +100,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-size: 100%;
+    object-fit: contain;
+    background-repeat: no-repeat;
   }
 
   .hero > .container {
@@ -312,13 +319,13 @@
     background-color: var(--color-logo-bg);
     display: block;
   }
-  
+
   .partner .container {
     width: 100%;
     height: auto;
     height: 10rem;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: fit-content;
@@ -349,5 +356,51 @@
   .partner .bar {
     padding-top: 1rem;
     content: url("../images/home/program-title-underline.svg");
+  }
+
+  /* style the footer */
+  .footer {
+    background-color: #fff;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer .container {
+    display: flex;
+    width: 70%;
+    height: auto;
+    padding: 4rem 0;
+    background-color: #fff;
+  }
+
+  .footer .footer-logo {
+    width: 20%;
+    content: url("../images/home/cck-logo.svg");
+  }
+
+  .footer .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-left: 5rem;
+  }
+
+  .footer .text-content .copy-right {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .footer .text-content .sub-text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
   }
 }
