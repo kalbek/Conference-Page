@@ -5,7 +5,6 @@
   --color-text-primary: #595959;
   --color-text-secondary: #515151;
   --color-bg-secondary: #f8f8f8;
-  /* --color-card-bg: rgba(241, 241, 241, 0.3); */
   --color-card-bg: rgba(59, 62, 69, 0.6);
   --color-black-tile: #000;
   --color-subtext: #f78c89;
@@ -14,10 +13,6 @@
 }
 
 /* css resets */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-       v2.0 | 20110126
-       License: none (public domain)
-  */
 
 html,
 body,
@@ -112,7 +107,9 @@ video {
 * {
   font-family: "Lato", sans-serif;
 }
+
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -126,24 +123,29 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -417,7 +419,7 @@ main .hero {
 }
 
 .past-summits .sub-text {
-    padding: 0 1rem 2rem 1rem;
+  padding: 0 1rem 2rem 1rem;
 }
 
 /* styling partner */
@@ -432,8 +434,6 @@ main .hero {
 }
 
 .partner .container {
-  width: auto;
-  height: auto;
   width: 100%;
   height: 10rem;
   display: flex;
@@ -452,7 +452,6 @@ main .hero {
 
 .partner .icons {
   display: flex;
-  justify-content: baseline;
   gap: 2rem;
   width: 120%;
   padding-bottom: 2rem;
