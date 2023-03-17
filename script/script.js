@@ -56,8 +56,8 @@ function main() {
   speakers.forEach((speaker) => {
     speakerDiv.innerHTML += `
       <div class='speaker-container ${
-  speaker.id > 2 ? 'hidden' : 'visible'
-  }' id='speaker-container'>
+        speaker.id > 2 ? 'hidden' : 'visible'
+      }' id='speaker-container'>
   <div class='speaker'>
 <div class='image' style='background-image: url(${speaker.imageUrl})'></div>
             <div class='text-content'>
@@ -73,16 +73,16 @@ function main() {
   const more = document.querySelector('.more-button');
   const moreOrLess = document.getElementById('more-less');
   more.addEventListener('click', () => {
-    speakerDiv.innerHTML = ``;
+    speakerDiv.innerHTML = '';
     speakers.forEach((speaker) => {
       speakerDiv.innerHTML += `
         <div class='speaker-container ${'speaker' + speaker.id} ${
-  moreOrLess.textContent === 'MORE' ? 'visible' : 'hidden'
-}' id='speaker-container'>
+        moreOrLess.textContent === 'MORE' ? 'visible' : 'hidden'
+      }' id='speaker-container'>
             <div class='speaker'>
                 <div class='image' style='background-image: url(${
-  speaker.imageUrl
-})'></div>
+                  speaker.imageUrl
+                })'></div>
                     <div class='text-content'>
                         <div class='title'>${speaker.title}</div>
                         <div class='main-text'>${speaker.mainText}</div>
@@ -96,10 +96,8 @@ function main() {
     const speakerContainer = document.getElementById('speaker-container');
     const moreOrLessArrow = document.querySelector('.arrow');
     if (speakerContainer.classList.contains('visible')) {
-      {
-        moreOrLess.innerHTML = 'LESS';
-        moreOrLessArrow.classList.add('rotate180');
-      }
+      moreOrLess.innerHTML = 'LESS';
+      moreOrLessArrow.classList.add('rotate180');
     } else {
       moreOrLess.innerHTML = 'MORE';
       moreOrLessArrow.classList.remove('rotate180');
@@ -123,8 +121,7 @@ const aboutOption = document.getElementById('mobile-about');
 // function to handle closing mobile menu
 function handleCloseMobileMenu() {
   if (
-    mobileMenu.classList.contains('visible') &&
-    mobileMenu.classList.remove('visible')
+    mobileMenu.classList.contains('visible') && mobileMenu.classList.remove('visible')
   ) {
     mobileMenu.classList.add('hidden');
   }
@@ -132,22 +129,19 @@ function handleCloseMobileMenu() {
 // function to handle opening mobile menu
 function handleOpenMobileMenu() {
   if (
-    mobileMenu.classList.contains('hidden') &&
-    mobileMenu.classList.remove('hidden')
+    mobileMenu.classList.contains('hidden') && mobileMenu.classList.remove('hidden')
   ) {
     mobileMenu.classList.add('visible');
   }
 }
 // open mobile menu on hamburger icon click (index page)
-indexMenu !== null &&
-  indexMenu.addEventListener('click', () => {
-    handleOpenMobileMenu();
-  });
+indexMenu.addEventListener('click', () => {
+  handleOpenMobileMenu();
+});
 // open mobile menu on hamburger icon click (about page)
-aboutMenu !== null &&
-  aboutMenu.addEventListener('click', () => {
-    handleOpenMobileMenu();
-  });
+aboutMenu.addEventListener('click', () => {
+  handleOpenMobileMenu();
+});
 closeMobileMenu.addEventListener('click', () => {
   handleCloseMobileMenu();
 });
