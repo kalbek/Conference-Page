@@ -160,9 +160,6 @@ function controlSpeakers() {
       handleCloseMobileMenu();
     } else {
       if (index < 2) {
-        if (speaker.classList.contains('hidden')) {
-          speaker.classList.remove('hidden');
-        }
         speaker.classList.add('visible');
       } else {
         speaker.classList.add('hidden');
