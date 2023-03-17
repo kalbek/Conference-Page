@@ -56,8 +56,8 @@ function main() {
   speakers.forEach((speaker) => {
     speakerDiv.innerHTML += `
       <div class='speaker-container ${
-        speaker.id > 2 ? 'hidden' : 'visible'
-      }' id='speaker-container'>
+  speaker.id > 2 ? 'hidden' : 'visible'
+}' id='speaker-container'>
   <div class='speaker'>
 <div class='image' style='background-image: url(${speaker.imageUrl})'></div>
             <div class='text-content'>
@@ -77,12 +77,12 @@ function main() {
     speakers.forEach((speaker) => {
       speakerDiv.innerHTML += `
         <div class='speaker-container ${'speaker' + speaker.id} ${
-        moreOrLess.textContent === 'MORE' ? 'visible' : 'hidden'
-      }' id='speaker-container'>
+  moreOrLess.textContent === 'MORE' ? 'visible' : 'hidden'
+}' id='speaker-container'>
             <div class='speaker'>
                 <div class='image' style='background-image: url(${
-                  speaker.imageUrl
-                })'></div>
+  speaker.imageUrl
+})'></div>
                     <div class='text-content'>
                         <div class='title'>${speaker.title}</div>
                         <div class='main-text'>${speaker.mainText}</div>
@@ -139,7 +139,7 @@ indexMenu.addEventListener('click', () => {
   handleOpenMobileMenu();
 });
 // open mobile menu on hamburger icon click (about page)
-aboutMenu.addEventListener('click', () => {
+if (aboutMenu !== null) aboutMenu.addEventListener('click', () => {
   handleOpenMobileMenu();
 });
 closeMobileMenu.addEventListener('click', () => {
@@ -166,9 +166,6 @@ function controlSpeakers() {
         }
         speaker.classList.add('visible');
       } else {
-        if (speaker.classList.contains('visible')) {
-          speaker.classList.remove('visible');
-        }
         speaker.classList.add('hidden');
       }
     }
