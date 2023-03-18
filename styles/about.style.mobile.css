@@ -338,6 +338,15 @@ main .hero {
 
 .logo-description .description {
   padding: 1rem 0.3rem;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.03em;
+  color: #838383;
 }
 
 .contact {
@@ -369,18 +378,6 @@ main .hero {
   letter-spacing: -0.02em;
   color: #2c2c2c;
   width: 65%;
-}
-
-.logo-description .description {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: -0.03em;
-  color: #838383;
 }
 
 .logo-description .logo {
@@ -436,7 +433,6 @@ main .hero {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: fit-content;
 }
 
 .partner .title {
