@@ -76,7 +76,7 @@ function main() {
     speakerDiv.innerHTML = '';
     speakers.forEach((speaker) => {
       speakerDiv.innerHTML += `
-        <div class='speaker-container 
+        <div class='speaker-container speaker${speaker.id}
         ${moreOrLess.textContent === 'MORE' ? 'visible' : 'hidden'
 }' id='speaker-container'>
             <div class='speaker'>
@@ -160,11 +160,12 @@ function controlSpeakers() {
     if (screenWidth > 768) {
       speaker.classList.add('visible');
       handleCloseMobileMenu();
-    }  
-    else if (screenWidth < 768 && index < 2) {
-      speaker.classList.add('visible');
     } else {
-      speaker.classList.add('hidden');
+      if (index < 2) {
+        speaker.classList.add('visible');
+      } else {
+        speaker.classList.add('hidden');
+      }
     }
   });
 }
