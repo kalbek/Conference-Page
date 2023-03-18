@@ -180,14 +180,14 @@
   .past-summits {
     width: 100%;
   }
-  
+
   .past-summits .sub-text {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 21px;
   }
-  
+
   .past-summits .images {
     display: flex;
     flex-direction: row;

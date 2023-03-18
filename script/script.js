@@ -121,16 +121,18 @@ const aboutOption = document.getElementById('mobile-about');
 // function to handle closing mobile menu
 function handleCloseMobileMenu() {
   if (
-    mobileMenu.classList.contains('visible') && mobileMenu.classList.remove('visible')
-  ) {
+    mobileMenu.classList.contains('visible')
+    ) {
+    mobileMenu.classList.remove('visible')
     mobileMenu.classList.add('hidden');
   }
 }
 // function to handle opening mobile menu
 function handleOpenMobileMenu() {
   if (
-    mobileMenu.classList.contains('hidden') && mobileMenu.classList.remove('hidden')
-  ) {
+    mobileMenu.classList.contains('hidden')
+    ) {
+    mobileMenu.classList.remove('hidden')
     mobileMenu.classList.add('visible');
   }
 }
