@@ -122,8 +122,8 @@ const aboutOption = document.getElementById('mobile-about');
 function handleCloseMobileMenu() {
   if (
     mobileMenu.classList.contains('visible')
-    ) {
-    mobileMenu.classList.remove('visible')
+  ) {
+    mobileMenu.classList.remove('visible');
     mobileMenu.classList.add('hidden');
   }
 }
@@ -131,8 +131,8 @@ function handleCloseMobileMenu() {
 function handleOpenMobileMenu() {
   if (
     mobileMenu.classList.contains('hidden')
-    ) {
-    mobileMenu.classList.remove('hidden')
+  ) {
+    mobileMenu.classList.remove('hidden');
     mobileMenu.classList.add('visible');
   }
 }
@@ -160,12 +160,11 @@ function controlSpeakers() {
     if (screenWidth > 768) {
       speaker.classList.add('visible');
       handleCloseMobileMenu();
+    }  
+    else if (screenWidth < 768 && index < 2) {
+      speaker.classList.add('visible');
     } else {
-      if (index < 2) {
-        speaker.classList.add('visible');
-      } else {
-        speaker.classList.add('hidden');
-      }
+      speaker.classList.add('hidden');
     }
   });
 }
