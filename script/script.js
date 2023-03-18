@@ -160,7 +160,7 @@ function controlSpeakers() {
     if (screenWidth > 768) {
       speaker.classList.add('visible');
       handleCloseMobileMenu();
-    } else {
+    } else if (screenWidth < 768) {
       if (index < 2) {
         speaker.classList.add('visible');
       } else {
