@@ -5,7 +5,6 @@
   --color-text-primary: #595959;
   --color-text-secondary: #515151;
   --color-bg-secondary: #f8f8f8;
-  /* --color-card-bg: rgba(241, 241, 241, 0.3); */
   --color-card-bg: rgba(59, 62, 69, 0.6);
   --color-black-tile: #000;
   --color-subtext: #f78c89;
@@ -14,10 +13,6 @@
 }
 
 /* css resets */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-       v2.0 | 20110126
-       License: none (public domain)
-  */
 
 html,
 body,
@@ -104,7 +99,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
   text-decoration: none;
 }
@@ -112,7 +106,9 @@ video {
 * {
   font-family: "Lato", sans-serif;
 }
+
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -126,24 +122,25 @@ nav,
 section {
   display: block;
 }
-body {
-  line-height: 1;
-}
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -169,6 +166,7 @@ table {
   display: flex;
   justify-content: center;
 }
+
 .flex-center-centered {
   display: flex;
   justify-content: center;
@@ -232,7 +230,6 @@ body {
   position: absolute;
   left: 1rem;
   top: 1rem;
-  margin-left: 0px;
 }
 
 .hidden {
@@ -247,7 +244,6 @@ body {
 
 main .hero {
   width: auto;
-  height: fit-content;
   height: auto;
 }
 
@@ -318,6 +314,20 @@ main .hero {
   width: 100%;
 }
 
+.logo-description .bar {
+  content: url("../images/home/bar-small.svg");
+}
+
+.past-summits .bar {
+  content: url("../images/home/bar-small.svg");
+  padding: 1rem 0;
+}
+
+.partner .bar {
+  padding-top: 1rem;
+  content: url("../images/home/bar-small.svg");
+}
+
 .logo-description .title .bar {
   margin-top: 1rem;
 }
@@ -326,13 +336,19 @@ main .hero {
   display: none;
 }
 
-.logo-description .bar {
-  content: url("../images/home/bar-small.svg");
-}
-
 .logo-description .description {
   padding: 1rem 0.3rem;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.03em;
+  color: #838383;
 }
+
 .contact {
   background-color: #f7f7f8;
   padding: 2rem;
@@ -364,18 +380,6 @@ main .hero {
   width: 65%;
 }
 
-.logo-description .description {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: -0.03em;
-  color: #838383;
-}
-
 .logo-description .logo {
   content: url("../images/about-logo-mobile.svg");
 }
@@ -391,11 +395,6 @@ main .hero {
   line-height: 28px;
 }
 
-.past-summits .bar {
-  content: url("../images/home/bar-small.svg");
-  padding: 1rem 0;
-}
-
 .past-summits .sub-text {
   font-style: normal;
   font-weight: 700;
@@ -406,6 +405,7 @@ main .hero {
   text-align: center;
   letter-spacing: -0.03em;
   color: #838383;
+  padding: 0 1rem 2rem 1rem;
 }
 
 .past-summits .images .image1 {
@@ -414,10 +414,6 @@ main .hero {
 
 .past-summits .images .image2 {
   content: url("../images/about/past-summit-image2.svg");
-}
-
-.past-summits .sub-text {
-    padding: 0 1rem 2rem 1rem;
 }
 
 /* styling partner */
@@ -432,15 +428,11 @@ main .hero {
 }
 
 .partner .container {
-  width: auto;
-  height: auto;
   width: 100%;
-  height: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: fit-content;
 }
 
 .partner .title {
@@ -451,8 +443,6 @@ main .hero {
 }
 
 .partner .icons {
-  display: flex;
-  justify-content: baseline;
   gap: 2rem;
   width: 120%;
   padding-bottom: 2rem;
@@ -467,11 +457,6 @@ main .hero {
   font-weight: 400;
   font-size: 30px;
   line-height: 28px;
-}
-
-.partner .bar {
-  padding-top: 1rem;
-  content: url("../images/home/bar-small.svg");
 }
 
 /* style the footer */
@@ -491,7 +476,6 @@ main .hero {
   font-weight: 700;
   font-size: 10px;
   line-height: 13px;
-  display: flex;
   align-items: center;
   letter-spacing: -0.01em;
   color: #3b3e45;

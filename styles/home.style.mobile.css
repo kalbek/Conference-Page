@@ -5,19 +5,12 @@
   --color-text-primary: #595959;
   --color-text-secondary: #515151;
   --color-bg-secondary: #f8f8f8;
-  /* --color-card-bg: rgba(241, 241, 241, 0.3); */
   --color-card-bg: rgba(59, 62, 69, 0.6);
   --color-black-tile: #000;
   --color-subtext: #f78c89;
   --color-logo-bg: #414246;
   --color-logo: #8f8f91;
 }
-
-/* css resets */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-     v2.0 | 20110126
-     License: none (public domain)
-*/
 
 html,
 body,
@@ -104,7 +97,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
   text-decoration: none;
 }
@@ -112,7 +104,9 @@ video {
 * {
   font-family: "Lato", sans-serif;
 }
+
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -126,24 +120,25 @@ nav,
 section {
   display: block;
 }
-body {
-  line-height: 1;
-}
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -169,6 +164,7 @@ table {
   display: flex;
   justify-content: center;
 }
+
 .flex-center-centered {
   display: flex;
   justify-content: center;
@@ -229,10 +225,14 @@ body {
 }
 
 .mobile-menu-active {
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  margin-left: 0px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0.001px;
+  right: 0.001px;
+  background-color: #e5e5e5;
+  z-index: 2;
 }
 
 .hidden {
@@ -256,17 +256,6 @@ body {
   z-index: 3;
 }
 
-.mobile-menu-active {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0.001px;
-  right: 0.001px;
-  background-color: #e5e5e5;
-  z-index: 2;
-}
-
 .mobile-menu-active .container .close {
   position: absolute;
   left: 87%;
@@ -282,7 +271,6 @@ body {
   line-height: 44px;
   color: #3a4a42;
   list-style: none;
-  /* padding-left: 20px; */
   margin-top: 3rem;
 }
 
@@ -308,7 +296,6 @@ body {
 
 main .hero {
   width: auto;
-  height: fit-content;
   height: auto;
   background-image: url("../images/home/hero-background-mobile.svg");
   background-size: 100%;
@@ -379,7 +366,6 @@ main .hero {
 .main-program {
   margin-top: -1.2rem;
   background-image: url("../images/home/program-bg.svg");
-  /* width: 104%; */
 }
 
 .main-program > .container {
@@ -391,6 +377,11 @@ main .hero {
   flex-direction: column;
   align-items: center;
   padding: 2rem 0;
+}
+
+.featured-speakers .bar {
+  margin-top: 1rem;
+  content: url("../images/home/bar-small.svg");
 }
 
 .main-program .title .bar {
@@ -460,6 +451,10 @@ main .hero {
   background-color: #fff;
 }
 
+.speaker {
+  margin-top: 1rem;
+}
+
 .featured-speakers .speaker {
   display: flex;
 }
@@ -470,10 +465,6 @@ main .hero {
   background-repeat: no-repeat;
 }
 
-.speaker {
-  margin-top: 1rem;
-}
-
 .speaker .title {
   color: var(--color-black-tile);
   font-style: normal;
@@ -481,11 +472,6 @@ main .hero {
   font-size: 15px;
   line-height: 18px;
   letter-spacing: -0.02em;
-}
-
-.featured-speakers .bar {
-  margin-top: 1rem;
-  content: url("../images/home/bar-small.svg");
 }
 
 .speaker .main-text {

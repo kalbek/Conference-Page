@@ -10,6 +10,11 @@
     width: 100%;
   }
 
+  main .container {
+    width: 100%;
+    position: relative;
+  }
+
   .top-nav .container {
     background-color: var(--color-primary);
     color: #fff;
@@ -30,7 +35,6 @@
 
   .cc-container {
     position: absolute;
-    right: 12%;
     margin-top: 0.2rem;
     right: 10%;
   }
@@ -62,7 +66,6 @@
 
   .bottom-nav .menu-container {
     padding-top: 1.1rem;
-    display: block;
     width: 45%;
     display: flex;
     justify-content: space-between;
@@ -90,14 +93,8 @@
     color: var(--color-heading);
   }
 
-  main .container {
-    width: 100%;
-    position: relative;
-  }
-
   main .hero {
     background-image: url("../images/about/about-hero-img-desktop.svg");
-    /* position: absolute; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,21 +114,6 @@
     font-size: 55px;
   }
 
-  main .hero-image p {
-    display: none;
-  }
-
-  .about-text {
-    width: 60%;
-    background-color: #fff;
-    /* position: absolute; */
-    /* top: 35%; */
-    padding: 4rem 1rem;
-    display: flex;
-    justify-content: center;
-    margin-top: -10%;
-  }
-
   .about-text p {
     font-style: normal;
     font-weight: 400;
@@ -142,6 +124,19 @@
     width: 78%;
   }
 
+  main .hero-image p {
+    display: none;
+  }
+
+  .about-text {
+    width: 60%;
+    background-color: #fff;
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: -10%;
+  }
+
   .contact .main-text {
     font-size: 15px;
     letter-spacing: 0.7px;
@@ -149,8 +144,6 @@
 
   .hero .sub-text {
     letter-spacing: 0.7px;
-    /* margin-top: 7%; */
-    /* position: absolute; */
   }
 
   .logo-description {
@@ -167,6 +160,13 @@
     width: 100%;
   }
 
+  .past-summits .heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 28px;
+  }
+
   .logo-description .title .heading {
     display: flex;
     flex-direction: column;
@@ -180,21 +180,14 @@
   .past-summits {
     width: 100%;
   }
-  
-  .past-summits .heading {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 28px;
-  }
-  
+
   .past-summits .sub-text {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 21px;
   }
-  
+
   .past-summits .images {
     display: flex;
     flex-direction: row;
